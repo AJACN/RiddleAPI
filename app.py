@@ -27,7 +27,7 @@ riddles = [
 
 @app.route('/')
 def index():
-    return 'CharadAPI tá ON! Ria!', 200
+    return 'Riddle me this...', 200
 
 @app.route('/riddles', methods=['GET'])
 def riddle():
