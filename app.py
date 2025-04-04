@@ -111,4 +111,4 @@ def delete_riddle(id):
     return jsonify({'message':'Riddle deleted successfully!'})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
