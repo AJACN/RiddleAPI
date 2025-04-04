@@ -131,8 +131,4 @@ Este projeto é uma API RESTful construída com Flask e Firebase Firestore para 
 
 ## Autor
 
--   \[Seu Nome]
-
-## Licença
-
-Este projeto é licenciado sob a [Licença MIT](LICENSE).
+-   Antonio Jairo Alves Cordeiro Neto
