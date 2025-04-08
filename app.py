@@ -42,6 +42,7 @@ def riddle():
     else:
         return jsonify({'message':'Error! No riddles found!'}), 404
 
+
 # ------ MÉTODO GET - LISTA CHARADAS -------
 @app.route('/riddles/list', methods=['GET'])
 def riddlelist():
@@ -55,6 +56,7 @@ def riddlelist():
         return jsonify(riddles), 200
     else:
         return jsonify({'message':'Error! No riddles found!'}), 404
+
 
 # -------- MÉTODO GET - CHARADA POR ID --------
 @app.route('/riddles/<id>', methods=['GET'])
@@ -91,6 +93,7 @@ def add_riddle():
 
     return jsonify({'message':'Riddle submitted successfully!'}), 201
 
+
 # -------- MÉTODO PUT - ALTERAR CHARADA -------
 @app.route('/riddles/<id>', methods=['PUT'])
 def alter_riddle(id):
@@ -110,6 +113,7 @@ def alter_riddle(id):
         return jsonify({'message':'Riddle updated successfully'}), 201
     else:
         return jsonify({'message':'Error. Riddle not found.'}), 404
+
 
 # ------- MÉTODO DELETE - EXCLUIR CHARADA -------
 @app.route('/riddles/<id>', methods=['DELETE'])
