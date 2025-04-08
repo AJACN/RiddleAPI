@@ -42,6 +42,19 @@ def riddle():
     else:
         return jsonify({'message':'Error! No riddles found!'}), 404
 
+# ------ MÉTODO GET - LISTA CHARADAS -------
+@app.route('/riddles/list', methods=['GET'])
+def riddlelist():
+    riddles = []
+    list = db.collection('riddles').stream()
+
+    for item in list:
+        riddles.append(item.to_dict())
+
+    if riddles:
+        return jsonify(riddles), 200
+    else:
+        return jsonify({'message':'Error! No riddles found!'}), 404
 
 # -------- MÉTODO GET - CHARADA POR ID --------
 @app.route('/riddles/<id>', methods=['GET'])
